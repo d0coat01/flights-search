@@ -72,6 +72,6 @@ Variables:
 
 Execution time is O(flights * provider_count * log(provider_count)) since we need to loop through every flight at least once and for each flight we need to sort an array of size provider_count at least once.
 
-Memory consumption is O(n) since I built another array of flight data without deallocating the previous data. I did this to save time since splicing each flight from the original data is expensive. If the original data from the API calls were reverse sorted, I could simply pop the flight and allocate it to the results, therefore using O(1) memory.
+Memory consumption is O(flights) since I built another array of flight data without deallocating the previous data. I did this to save time since splicing each flight from the original data is expensive. If the original data from the API calls were reverse sorted, I could simply pop the flight and allocate it to the results, therefore using O(1) memory.
 
 
